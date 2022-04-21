@@ -1,10 +1,10 @@
-# CAMPSCRB
-Fictitious website for CoderHouse's final project. 
+# Bea Joyas eCommerce REACT
+Fictitious eCommerce for CoderHouse's final project. 
 
 # Hi, I'm Teo! 👋
 
-# Getting Started with Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with React 
+This is my first project using react [Create React App](https://github.com/facebook/create-react-app).
 
 ## 🚀 About Me
 I am a full stack web developer student who has just started, and I want to learn the different languages ​​in the process!
