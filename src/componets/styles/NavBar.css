@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #13133E;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-container {
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-container li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.select-language {
+    appearance: none;
+    background: transparent;
+    border-style: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-language option {
+    background: black;
+}
