@@ -1,34 +1,38 @@
-import React from 'react';
-import './styles/NavBar.css';
-import logo from './img/logo.png';
+import React from "react";
+import "./styles/NavBar.css";
+import logo from "./img/apple-icon.png";
+import CartWidget from "./CartWidget";
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+
 
 const NavBar = () => {
-
-    return (
-        <header className="header">
-            <div className="logo-container">
-                <img src= {logo} alt="logo" height="50" width="50"/>
-            </div>
-
-            <nav>
-                <ul className="nav-container">
-                    <li>
-                        <a href="/">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="/">Productos</a>
-                    </li>
-                    <li>
-                        <a href="/">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
-    );
+return (
+    <Navbar className="Navbar-bg" expand="lg">
+        <Container>
+        <Navbar.Brand href="#home">
+            <img
+            alt=""
+            src={logo}
+            width="50"
+            height="50"
+            className="d-inline-block align-top"
+            />
+        </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="">Sobre Nosotros</Nav.Link>
+                    <Nav.Link href="">Shop</Nav.Link>
+                    <Nav.Link href="">Contacto</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+            <CartWidget/>
+        </Container>
+    </Navbar>
+);
 };
 
 export default NavBar;
