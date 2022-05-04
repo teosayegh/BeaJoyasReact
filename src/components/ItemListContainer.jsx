@@ -1,7 +1,9 @@
+import "./styles/ItemListContainer.css"
+
 const ItemListContainer = ( { greeting='saludo' } ) => {
 
 return (
-    <div>
+    <div className="centrar-item">
         
         {greeting}
         

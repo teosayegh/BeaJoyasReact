@@ -1,18 +1,19 @@
 import React from 'react';
-import NavBar from './componets/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './componets/ItemListContainer';
+
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+// import ItemCount from './components/ItemCount';
 
 
 export default function App() {
+
+  
   return (
-    <>
-      
-      <NavBar/>
       <div className="App">
+      <NavBar/>
       <ItemListContainer  greeting={'Hola soy un ItemListContainer'}/>
       </div>
-    </>
   );
 }
 
