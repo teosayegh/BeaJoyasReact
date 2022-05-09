@@ -31,11 +31,6 @@
     background-color: #DD65A3;
 }
 
-.botones[disabled] {
-    color: #555555;
-    background-color: transparent;
-    border: 1px solid #555555;
-}
 
 .count-container__qty {
     text-align: center;
