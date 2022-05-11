@@ -1,61 +1,69 @@
 import {useState, useEffect} from "react"
 import ItemList from "./ItemList";
 import "./styles/ItemListContainer.css"
+import AJ from "./img/anillo_julia.jpg"
+import AC from "./img/argolla_corazon.jpg"
+import PC from "./img/pulsera_doblecorazon.jpg"
+import AR from "./img/argolla_rayo.jpeg"
+import ADC from "./img/aros_doble_circulo.jpeg"
+import AE from "./img/aros_estrella.jpeg"
+import AP from "./img/aros_patita_perro.jpeg"
+import TE from "./img/trepador_estrella_fugaz.jpeg"
 
 const joyas = [{
     id: 0,
     name: "Anillo Julia",
     price: 3590,
-    img: "./img/anillo_julia.jpg",
+    img: AJ,
     type: "Anillo",
 },
 {
     id: 1,
     name: "Argollas Corazón",
     price: 3590,
-    img: "./img/argolla_corazon.jpg",
+    img: AC,
     type: "Argollas",
 },
 {
     id: 2,
     name: "Pulsera Corazón",
     price: 2710,
-    img: "./img/pulsera_doblecorazon.jpg",
+    img: PC,
     type: "Pulsera",
 },
 {
     id: 3,
     name: "Argollas Rayo",
     price: 3000,
-    img: "./img/argolla_rayo.jpeg",
+    img: AR,
     type: "Argollas",
 },
 {
     id: 4,
     name: "Aros Circulo",
     price: 2590,
-    img: "./img/aros_doble_circulo.jpeg",
+    img: ADC,
     type: "Aros",
 },
 {
     id: 5,
     name: "Aros Estrella",
     price: 1885,
-    img: "./img/aros_estrella.jpeg",
+    img: AE,
     type: "Aros",
 },
 {
     id: 6,
     name: "Aros Patitas",
     price: 2380,
-    img: "./img/aros_patita_perro.jpeg",
+    img: AP,
     type: "Aros",
 },
 {
     id: 7,
     name: "Trepador Estrella",
     price: 2654,
-    img: "./img/trepador_estrella_fugaz.jpeg",
+    img: TE,
     type: "Aros",
 },
 ];
