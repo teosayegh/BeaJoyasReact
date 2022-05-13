@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react"; 
 
-import "./styles/ItemCount.css";
+import "./ItemCount.css";
 
 export default function ItemCount({stock, initial, onAdd}) {
     const [quantity, setQuantity] = useState(initial);
