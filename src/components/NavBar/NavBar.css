@@ -1,0 +1,13 @@
+.Navbar-bg{
+    background-color: #DD65A3;
+}
+
+.no-style {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.no-style:hover{
+    color: black;
+}
