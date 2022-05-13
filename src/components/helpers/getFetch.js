@@ -56,8 +56,13 @@ const joyas = [{
 },
 ];
 
-const getFetch = new Promise ((resolve) => {
-    setTimeout(() => {
-        resolve(joyas);
-    }, 2000);
-})
+
+export const getFetch = (id) => {
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+                const query = id ? joyas.find(producto => producto.id === id ) : joyas                                  
+                resolve( query )                           
+            }, 2000)
+        })            
+    
+}

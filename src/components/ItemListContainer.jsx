@@ -10,7 +10,7 @@ export default function ItemListContainer (){
 
 
     useEffect(() => {
-        getFetch
+        getFetch()
         .then(res => setItems(res))
         .catch(err => console.log(err))
         .finally(() => setLoader(false))
