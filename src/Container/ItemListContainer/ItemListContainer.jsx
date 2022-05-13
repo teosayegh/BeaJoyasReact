@@ -2,7 +2,7 @@ import {useState, useEffect} from "react"
 import ItemList from "../../components/ItemList/ItemList";
 import "./ItemListContainer.css"
 import { getFetch } from "../../helpers/getFetch"
-import { useParams } from "react-router-dom"
+
 
 
 export default function ItemListContainer (){
@@ -10,7 +10,7 @@ export default function ItemListContainer (){
     const [loader,setLoader] = useState(true);
 
 
-    /* const { id } = useParams()  */
+
 
     useEffect(() => {
             getFetch()   
