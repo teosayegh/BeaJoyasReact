@@ -1,58 +1,58 @@
 [
     {
-    "id": 0,
+    "id": "0",
     "name": "Anillo Julia",
     "price": 3590,
     "img": "./img/anillo_julia.jpg",
-    "type": "Anillo"
+    "categoria": "Anillo"
 },
 {
-    "id": 1,
+    "id": "1",
     "name": "Argollas Corazón",
     "price": 3590,
     "img": "./img/argolla_corazon.jpg",
-    "type": "Argollas"
+    "categoria": "Argollas"
 },
 {
-    "id": 2,
+    "id": "2",
     "name": "Pulsera Corazón",
     "price": 2710,
     "img": "./img/pulsera_doblecorazon.jpg",
-    "type": "Pulsera"
+    "categoria": "Pulsera"
 },
 {
-    "id": 3,
+    "id": "3",
     "name": "Argollas Rayo",
     "price": 3000,
     "img": "./img/argolla_rayo.jpeg",
-    "type": "Argollas"
+    "categoria": "Argollas"
 },
 {
-    "id": 4,
+    "id": "4",
     "name": "Aros Circulo",
     "price": 2590,
     "img": "./img/aros_doble_circulo.jpeg",
-    "type": "Aros"
+    "categoria": "Aros"
 },
 {
-    "id": 5,
+    "id": "5",
     "name": "Aros Estrella",
     "precio": 1885,
     "img": "./img/aros_estrella.jpeg",
-    "type": "Aros"
+    "categoria": "Aros"
 },
 {
-    "id": 6,
+    "id": "6",
     "name": "Aros Patitas",
     "precio": 2380,
     "img": "./img/aros_patita_perro.jpeg",
-    "type": "Aros"
+    "categoria": "Aros"
 },
 {
-    "id": 7,
+    "id": "7",
     "name": "Trepador Estrella",
     "precio": 2654,
     "img": "./img/trepador_estrella_fugaz.jpeg",
-    "type":"Aros"
+    "categoria":"Aros"
 }
 ]
