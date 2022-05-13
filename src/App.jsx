@@ -11,13 +11,14 @@ import Cart from './components/Cart/Cart';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-      <NavBar/>
-      <Routes>
-        <Route path="/" element = { <ItemListContainer /> } />   
-        <Route path="/detalle/:detalleId" element = { <ItemDetailContainer /> } />
-        <Route path="/cart" element = { <Cart /> } />
-      </Routes>
+      <div className="App">  
+        <NavBar />
+          <Routes>
+            <Route path="/" element = { <ItemListContainer /> } />
+            <Route path="/categoria/:id" element = { <ItemListContainer /> } />                        
+            <Route path="/detalle/:detalleId" element = { <ItemDetailContainer /> } />
+            <Route path="/cart" element = { <Cart /> } />
+          </Routes>
       </div>
     </BrowserRouter>
   );
