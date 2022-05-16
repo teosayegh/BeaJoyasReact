@@ -1,4 +1,4 @@
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import Card from "react-bootstrap/Card";
 
 export default function Item({name, price, img}) {

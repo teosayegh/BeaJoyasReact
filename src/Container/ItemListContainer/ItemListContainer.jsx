@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
-import ItemList from "./ItemList";
-import "./styles/ItemListContainer.css"
-import { getFetch } from "./helpers/getFetch"
+import ItemList from "../../components/ItemList/ItemList";
+import "../ItemListContainer/ItemListContainer.css"
+import { getFetch } from "../../components/helpers/getFetch"
 
 
 export default function ItemListContainer (){
