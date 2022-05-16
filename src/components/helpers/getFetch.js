@@ -2,7 +2,7 @@ const joyas = [{
     id: "0",
     name: "Anillo Julia",
     price: 3590,
-    img: "/public/img/anillo_julia.jpg",
+    img: "../../../public/img/anillo_julia.jpg",
     category: "Anillo",
 },
 {

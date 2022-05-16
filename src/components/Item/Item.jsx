@@ -1,17 +1,17 @@
 import ItemCount from "../ItemCount/ItemCount";
 import Card from "react-bootstrap/Card";
 
-export default function Item({name, price, img}) {
+export default function Item({el}) {
 
     return (
         <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={img} alt="Imagen del Producto" />
+    <Card.Img variant="top" src={el.img} alt="Imagen del Producto" />
     <Card.Body>
-    <Card.Title>{name}</Card.Title>
+    <Card.Title>{el.name}</Card.Title>
     <Card.Text>
-    {`Precio: $${price}`}
+    {`Precio: $${el.price}`}
     </Card.Text>
-    <ItemCount initial={1} stock={5} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${name} agregada/s al pedido`)}/>
+    <ItemCount initial={1} stock={5} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${el.name} agregada/s al pedido`)}/>
     </Card.Body>
 </Card>
     );

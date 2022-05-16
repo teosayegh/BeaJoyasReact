@@ -2,19 +2,19 @@ import {useState, useEffect} from "react"
 import ItemList from "../../components/ItemList/ItemList";
 import "../ItemListContainer/ItemListContainer.css"
 import { getFetch } from "../../components/helpers/getFetch"
-
+import { useParams } from "react-router-dom";
 
 export default function ItemListContainer (){
     const [items,setItems] = useState([]);
     const [loader,setLoader] = useState(true);
-
+    const {id} = useParams();
 
     useEffect(() => {
         getFetch()
         .then(res => setItems(res))
         .catch(err => console.log(err))
         .finally(() => setLoader(false))
-    },[]);
+    },[id]);
 
     return (
         <div>
