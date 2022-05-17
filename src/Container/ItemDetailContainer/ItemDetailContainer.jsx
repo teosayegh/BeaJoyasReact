@@ -6,22 +6,19 @@ import {getFetch} from "../../components/helpers/getFetch"
 
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});
-    const [loader,setLoader] = useState(true);
-    const {id} = useParams();
+    const {idDetail} = useParams();
 
     useEffect(() => {
         setTimeout(() => {
-            getFetch
-            .then(itemsList => itemsList.find(el => el.id === id))
+            getFetch(idDetail)
             .then(res => setItem(res))
             .catch(err => console.log(err))
-            .finally(() => setLoader(false))
         }, 2000);
-    },[id]);
+    },[idDetail]);
 
     return (
-        <div className="centrar-item">
-            {loader? <h2>Cargando...</h2>: <ItemDetail item={item}/>}
+        <div>
+        <ItemDetail item={item}/>
         </div>
     );
 }
