@@ -40,9 +40,9 @@ export default function ItemCount({id, stock, initial, onAdd}) {
             +
             </button>
         </div>
-        {/* <Link to={`/itemDetail/${id}`}>  */}
+        <Link to={`/itemDetail/${id}`}> 
         <button className="button-primario" onClick={addToCart}>Ver más...</button>
-        {/* </Link> */}
+        </Link>
         
         </div>
     );
