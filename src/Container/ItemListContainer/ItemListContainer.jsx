@@ -7,14 +7,22 @@ import { useParams } from "react-router-dom";
 export default function ItemListContainer (){
     const [items,setItems] = useState([]);
     const [loader,setLoader] = useState(true);
-    const {id} = useParams();
+    const { id } = useParams() 
 
     useEffect(() => {
-        getFetch()
-        .then(res => setItems(res))
-        .catch(err => console.log(err))
-        .finally(() => setLoader(false))
-    },[id]);
+        if (id) {
+            getFetch()   
+            .then(res=> setItems(res.filter((prods) => prods.category === id)))
+            .catch((err)=> console.log(err))
+            .finally(()=>setLoader(false))                             
+        } else {
+            getFetch()  
+            .then(respuesta=> setItems(respuesta))
+            .catch((err)=> console.log(err))
+            .finally(()=>setLoader(false))                 
+        }
+    }, [id])
+
 
     return (
         <div>
