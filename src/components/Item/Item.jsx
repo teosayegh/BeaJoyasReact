@@ -11,7 +11,7 @@ export default function Item({el}) {
     <Card.Text>
     {`Precio: $${el.price}`}
     </Card.Text>
-    <ItemCount initial={1} stock={5} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${el.name} agregada/s al pedido`)}/>
+    <ItemCount initial={1} id={el.id} stock={5} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${el.name} agregada/s al pedido`)}/>
     </Card.Body>
 </Card>
     );
