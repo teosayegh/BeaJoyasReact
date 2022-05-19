@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 import { NavLink } from "react-router-dom";
 
 
-const array = [
+const categorias = [
     {idCategoria: '1', name: 'aros', nameButton: 'Aros'},
     {idCategoria: '2', name: 'argollas', nameButton: 'Argollas'},
     {idCategoria: '3', name: 'anillos', nameButton: 'Anillos'},
@@ -31,7 +31,7 @@ return (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                    {array.map(param => <NavLink key={param.id} to={`/categoria/${param.name}`}>{param.nameButton}</NavLink>) }
+                    {categorias.map(param => <NavLink key={param.id} to={`/categoria/${param.name}`}>{param.nameButton}</NavLink>) }
                 </Nav>
             </Navbar.Collapse>
             <CartWidget/>
