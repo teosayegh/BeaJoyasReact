@@ -3,5 +3,6 @@
     padding: 1rem;
     column-gap: 1rem;
     flex-flow: row wrap;
+    justify-content: center;
     text-align: center;
 }

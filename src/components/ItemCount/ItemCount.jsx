@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./ItemCount.css";
 
-export default function ItemCount({id, stock, initial, onAdd}) {
+export default function ItemCount({stock, initial, onAdd}) {
     const [quantity, setQuantity] = useState(initial);
 
     function increase() {
@@ -42,7 +42,7 @@ export default function ItemCount({id, stock, initial, onAdd}) {
         </div>
 
         <Link to="/cart"> 
-        <button className="button-primario" onClick={addToCart}>Agregar al carrito</button>
+        <button className="button-go-cart" onClick={addToCart}>Ir al carrito</button>
         </Link>
         
         </div>

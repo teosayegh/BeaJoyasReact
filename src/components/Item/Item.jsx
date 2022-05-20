@@ -12,7 +12,7 @@ export default function Item({el}) {
     {`Precio: $${el.price}`}
     </Card.Text>
     <Link to={`/detalle/${el.id}`}> 
-        <button className="button-primario">Ver más...</button>
+        <button className="button-ver-mas">Ver más...</button>
         </Link>
     </Card.Body>
 </Card>

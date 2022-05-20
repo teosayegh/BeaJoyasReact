@@ -5,7 +5,7 @@ import { getFetch } from "../../components/helpers/getFetch"
 import { useParams } from "react-router-dom";
 
 export default function ItemListContainer (){
-    const [items,setItems] = useState([]);
+    const [items,setItems] = useState({});
     const [loader,setLoader] = useState(true);
     const { id } = useParams() 
 

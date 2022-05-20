@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
 }
 
 .container-contador {
@@ -46,7 +45,7 @@ button {
 }
 
 
-.button-primario {
+.button-go-cart {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 1.3em 3em;
@@ -61,12 +60,33 @@ button {
     outline: none;
 }
 
-.button-primario:hover {
+.button-go-cart:hover {
     background-color: #DD65A3;
     color: #fff;
 }
 
-.button-primario:active {
+.button-go-cart:active {
+    background-color: #DD65A3;
+    color: #fff;
+}
+
+.button-ver-mas {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    background-color: #DD65A3;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-ver-mas:hover {
+    background-color: #DD65A3;
+    color: #fff;
+}
+
+.button-ver-mas:active {
     background-color: #DD65A3;
     color: #fff;
 }

@@ -14,6 +14,7 @@ const joyas = [{
     price: 3590,
     img: img1,
     category: "Anillo",
+    stock: "5"
 },
 {
     id: "1",
@@ -21,6 +22,7 @@ const joyas = [{
     price: 3590,
     img: img2,
     category: "Argollas",
+    stock: "6"
 },
 {
     id: "2",
@@ -28,6 +30,7 @@ const joyas = [{
     price: 2710,
     img: img3,
     category: "Pulsera",
+    stock: "7"
 },
 {
     id: "3",
@@ -35,6 +38,7 @@ const joyas = [{
     price: 3000,
     img: img4,
     category: "Argollas",
+    stock: "8"
 },
 {
     id: "4",
@@ -42,6 +46,7 @@ const joyas = [{
     price: 2590,
     img: img5,
     category: "Aros",
+    stock: "9"
 },
 {
     id: "5",
@@ -49,6 +54,7 @@ const joyas = [{
     price: 1885,
     img: img6,
     category: "Aros",
+    stock: "10"
 },
 {
     id: "6",
@@ -56,6 +62,7 @@ const joyas = [{
     price: 2380,
     img: img7,
     category: "Aros",
+    stock: "4"
 },
 {
     id: "7",
@@ -63,6 +70,7 @@ const joyas = [{
     price: 2654,
     img: img8,
     category: "Aros",
+    stock: "3"
 },
 ];
 
