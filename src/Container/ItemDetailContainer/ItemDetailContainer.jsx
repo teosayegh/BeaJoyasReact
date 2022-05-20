@@ -7,17 +7,15 @@ import {getFetch} from "../../components/helpers/getFetch"
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});
     const [loader,setLoader] = useState(true);
-    const {id} = useParams();
+    const { detalleId } = useParams()
 
     useEffect(() => {
-        setTimeout(() => {
-            getFetch()
-            .then(itemsList => itemsList.find(el => el.id === id))
-            .then(res => setItem(res))
-            .catch(err => console.log(err))
-            .finally(() => setLoader(false))
-        }, 2000);
-    },[id]);
+        getFetch(detalleId) 
+        .then(respuesta=> setItem(respuesta))
+        .catch((err)=> console.log(err))
+        .finally(()=>setLoader(false))     
+    }, [])
+
 
     return (
         <div>

@@ -12,12 +12,12 @@ export default function ItemListContainer (){
     useEffect(() => {
         if (id) {
             getFetch()   
-            .then(res=> setItems(res.filter((el) => el.categoria === id)))
+            .then(res=> setItems(res.filter((el) => el.category === id)))
             .catch((err)=> console.log(err))
             .finally(()=>setLoader(false))                             
         } else {
             getFetch()  
-            .then(respuesta=> setItems(respuesta))
+            .then(res=> setItems(res))
             .catch((err)=> console.log(err))
             .finally(()=>setLoader(false))                 
         }
