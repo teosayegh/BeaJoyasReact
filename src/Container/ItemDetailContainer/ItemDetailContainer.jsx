@@ -22,7 +22,7 @@ export default function ItemDetailContainer() {
     return (
         <div>
         {loader? 
-        <h2>Cargando...</h2>
+        <h2 className="centrar-item">Cargando...</h2>
         : 
         <ItemDetail item={item}/>}
         </div>

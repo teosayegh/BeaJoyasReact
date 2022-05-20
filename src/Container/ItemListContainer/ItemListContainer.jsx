@@ -12,7 +12,7 @@ export default function ItemListContainer (){
     useEffect(() => {
         if (id) {
             getFetch()   
-            .then(res=> setItems(res.filter((el) => el.category === id)))
+            .then(res=> setItems(res.filter((el) => el.categoria === id)))
             .catch((err)=> console.log(err))
             .finally(()=>setLoader(false))                             
         } else {

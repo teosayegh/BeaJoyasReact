@@ -13,8 +13,9 @@ export default function ItemDetail ({item}) {
             <Card.Text>
             {`Precio: $${item.price}`}
             </Card.Text>
+            <ItemCount initial={1} stock={5} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${item.name} agregada/s al pedido`)}/>
         </Card.ImgOverlay>
-        <ItemCount initial={1} stock={5} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${item.name} agregada/s al pedido`)}/>
+        
         </Card>
     )
 }
