@@ -4,16 +4,8 @@ import logo from "../logos/apple-icon.png";
 import CartWidget from "../CartWidget/CartWidget";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-
-const categorias = [
-    {idCategoria: '1', name: 'aros', nameButton: 'Aros'},
-    {idCategoria: '2', name: 'argollas', nameButton: 'Argollas'},
-    {idCategoria: '3', name: 'anillos', nameButton: 'Anillos'},
-    {idCategoria: '4', name: 'pulseras', nameButton: 'Pulseras'},
-]
 
 const NavBar = () => {
 return (
@@ -30,9 +22,10 @@ return (
         </NavLink>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-                    {categorias.map(param => <NavLink key={param.id} to={`/categoria/${param.name}`}>{param.nameButton}</NavLink>) }
-                </Nav>
+            <Link to='/category/Aros'>Aros </Link>
+            <NavLink to="/category/Argollas">Argollas</NavLink>
+            <NavLink to="/category/Anillos">Anillos</NavLink>
+            <NavLink to="/category/Pulseras">Pulseras</NavLink>
             </Navbar.Collapse>
             <CartWidget/>
         </Container>

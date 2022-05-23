@@ -1,17 +1,19 @@
+import React from 'react';
 import { Link } from "react-router-dom"
 import Card from "react-bootstrap/Card";
 
-export default function Item({el}) {
+export default function Item({item}) {
 
     return (
         <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={el.img} alt="Imagen del Producto" />
+            
+    <Card.Img variant="top" src={item.img} alt="Imagen del Producto" />
     <Card.Body>
-    <Card.Title>{el.name}</Card.Title>
+    <Card.Title>{item.name}</Card.Title>
     <Card.Text>
-    {`Precio: $${el.price}`}
+    {`Precio: $${item.price}`}
     </Card.Text>
-    <Link to={`/detalle/${el.id}`}> 
+    <Link to={`/detalle/${item.id}`}> 
         <button className="button-ver-mas">Ver más...</button>
         </Link>
     </Card.Body>

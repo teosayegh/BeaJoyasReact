@@ -1,3 +1,4 @@
+
 import img1 from "../../img/anillo_julia.jpg"
 import img2 from "../../img/argolla_corazon.jpg"
 import img3 from "../../img/pulsera_doblecorazon.jpg"
@@ -13,7 +14,7 @@ const joyas = [{
     name: "Anillo Julia",
     price: 3590,
     img: img1,
-    category: "Anillo",
+    category: "Anillos",
     stock: "5"
 },
 {
@@ -29,7 +30,7 @@ const joyas = [{
     name: "Pulsera Corazón",
     price: 2710,
     img: img3,
-    category: "Pulsera",
+    category: "Pulseras",
     stock: "7"
 },
 {
@@ -78,7 +79,7 @@ const joyas = [{
 export const getFetch = (id) => {
     return new Promise((resolve)=>{
         setTimeout(()=>{
-                const query = id ? joyas.find(producto => producto.id === id ) : joyas                                  
+                const query = id ? joyas.find((producto) => producto.id === id ) : joyas                                  
                 resolve( query )                           
             }, 2000)
         })            
