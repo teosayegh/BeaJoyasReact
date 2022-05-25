@@ -11,10 +11,12 @@ export default function CartWidget() {
     const {totalItems} = UseCartContext();
 return (
     <div>
-        <Link to='/cart' className="non-style" >
+        <Link to='/cart' className="non-style" style={{pointerEvents: !totalItems ? 'none' : ''}}>
+        <div style={{opacity: !totalItems ? '0.5' : '1'}}> </div>
         <FontAwesomeIcon  icon= {faCartShopping} />
         <div className="numero">{totalItems}</div>
         </Link>
+        
     </div>
 )
 }
