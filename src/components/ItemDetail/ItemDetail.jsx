@@ -1,10 +1,24 @@
 import React from 'react'
 import Card from "react-bootstrap/Card";
+import { UseCartContext } from '../../Context/CartContext';
+import { BuyButton } from '../BuyButton/BuyButton';
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
+import { useState } from "react";
 
 
 export default function ItemDetail ({item}) {
+
+
+    const [inputType, setInputType] = useState('itemCount');
+    const {addToCart} = UseCartContext();
+    
+    function onAdd(quantity) {
+        addToCart({...item, quantity})
+        setInputType('buyButtons');
+    }
+
+
     return (
         <Card className="bg-dark text-white">
         <Card.Img className="dimension" src={item.img} alt="Imagen del Producto" />
@@ -13,7 +27,9 @@ export default function ItemDetail ({item}) {
             <Card.Text>
             {`Precio: $${item.price}`}
             </Card.Text>
-            <ItemCount initial={1} stock={item.stock} onAdd={(quantity)=> console.log(`${quantity} unidad/es de ${item.name} agregada/s al pedido`)}/>
+            {inputType === 'itemCount' ?
+            <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>:
+            <BuyButton/>}
         </Card.ImgOverlay>
         
         </Card>
