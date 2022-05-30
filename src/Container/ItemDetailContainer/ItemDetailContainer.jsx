@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
-import {getFetch} from "../../components/helpers/getFetch"
+import {doc, getDoc, getFirestore } from "firebase/firestore"
 
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});
@@ -11,8 +11,10 @@ export default function ItemDetailContainer() {
     const { id } = useParams()
 
     useEffect(() => {
-        getFetch(id) 
-        .then(respuesta=> setItem(respuesta))
+        const db = getFirestore();
+        const dbQuery = doc(db, 'joyas', id);
+        getDoc(dbQuery)
+        .then(resp => setItem({id: resp.id, ...resp.data()}))
         .catch((err)=> console.log(err))
         .finally(()=>setLoader(false))     
     }, [id])
