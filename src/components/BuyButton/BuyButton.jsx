@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import "./BuyButton.css"
 
 export const BuyButton = () => {
     return (
     <>
-        <div className='buyButton'>
+        <div >
             <Link to={"/"}>
-                <button className='button'>Seguir comprando</button>
+                <button className='button1'>Seguir comprando</button>
             </Link>
             <Link to={"/cart"}>
-                <button className='button'>Finalizar compra</button>
+                <button className='button1'>Finalizar compra</button>
             </Link>
         </div>
     </>

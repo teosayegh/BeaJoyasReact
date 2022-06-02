@@ -4,6 +4,7 @@ import ItemList from "../../components/ItemList/ItemList";
 import "../ItemListContainer/ItemListContainer.css"
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
+import Spinner from 'react-bootstrap/Spinner'
 
 export default function ItemListContainer (){
     const [items,setItems] = useState({});
@@ -53,7 +54,13 @@ export default function ItemListContainer (){
     return (
         <div>
             {loader ? (
-            <h2 className="centrar-item">Cargando...</h2>)
+                <div className="box">
+                    <div>
+                        <Spinner animation="border" role="status" className="color">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                    </div>
+                </div>)
             : (
             <ItemList items={items} />)}
         </div>

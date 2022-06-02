@@ -10,9 +10,6 @@ export default function Item({item}) {
     <Card.Img variant="top" src={item.img} alt="Imagen del Producto" />
     <Card.Body>
     <Card.Title>{item.name}</Card.Title>
-    <Card.Text>
-    {`Precio: $${item.price}`}
-    </Card.Text>
     <Link to={`/detalle/${item.id}`}> 
         <button className="button-ver-mas">Ver más...</button>
         </Link>

@@ -1,6 +1,78 @@
-.dimension {
-    width: 300px;
-    height: 300px;
-    text-align: center;
+.centrar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.cardContainer {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
+    border-radius: 10px;
+    width: 100vh;
+    height: 70vh;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #191919;
+    margin-top: 10px;
+}
+
+.cardP {
+    font-size: 0.6em;
+    color: #ba7e7e;
+    letter-spacing: 1px;
+}
+
+.cardH1 {
+    font-size: 1.2em;
+    color: #E8E8E8;
+    margin-top: -5px;
+}
+
+.cardH2 {
+    color: #c3a1a0;
+    margin-top: -5px;
+}
+
+.cardImg {
+    width: 290px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+.cardProd {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 10%;
+    left: 55%;
+}
+
+.cardDesc {
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 17px;
+    color: #E8E8E8;
+    font-size: 0.7em;
+    line-height: 1.6em;
+    margin-right: 25px;
+    text-align: justify;
+}
+
+
+.add {
+    width: 67%;
+}
+
+.like {
+    width: 22%;
+}
+
+.margin{
+    margin-bottom: 5px;
+}
