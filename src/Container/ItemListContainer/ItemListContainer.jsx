@@ -4,7 +4,7 @@ import ItemList from "../../components/ItemList/ItemList";
 import "../ItemListContainer/ItemListContainer.css"
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
-import Spinner from 'react-bootstrap/Spinner'
+import Loader from '../../components/Loader/Loader';
 
 export default function ItemListContainer (){
     const [items,setItems] = useState({});
@@ -36,33 +36,12 @@ export default function ItemListContainer (){
     }
 }, [cat])
 
-    /* useEffect(() => {
-        if (cat) {
-            getFetch()   
-            .then(res=> setItems(res.filter((items) => items.category === cat)))
-            .catch((err)=> console.log(err))
-            .finally(()=>setLoader(false))                             
-        } else {
-            getFetch()  
-            .then(res=> setItems(res))
-            .catch((err)=> console.log(err))
-            .finally(()=>setLoader(false))                 
-        }
-    }, [cat]) */
-
-
     return (
         <div>
-            {loader ? (
-                <div className="box">
-                    <div>
-                        <Spinner animation="border" role="status" className="color">
-                            <span className="visually-hidden">Loading...</span>
-                        </Spinner>
-                    </div>
-                </div>)
-            : (
-            <ItemList items={items} />)}
+            {loader ? 
+                <Loader />
+            : 
+            <ItemList items={items} />}
         </div>
     );
 }
