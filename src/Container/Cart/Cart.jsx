@@ -1,16 +1,23 @@
 import React from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { UseCartContext } from "../../Context/CartContext";
-import CartItem from "../CartItem/CartItem";
+import CartList from '../../components/CartList/CartList';
 import "./Cart.css"
 
 export default function Cart() {
-    const {cartList, clearCart, totalPrice, totalItems} = UseCartContext();
+    const {totalItems, orderId, createOrder} = UseCartContext();
+    const [orderSent, setOrderSent] = useState(false)
+
+    function sendOrderManage(customerData) {
+        setOrderSent(true);
+        createOrder(customerData);
+    }
     
     if (!totalItems) {
         return (
             <div className="cart">
-                <h1>El pedido está vacío</h1>
+                {orderSent ? <h1>Pedido enviado! Nro de pedido: {orderId}</h1> : <h1>El pedido está vacío</h1>}
                 <Link to='/'>
                     <button>Volver al menú</button>
                 </Link>
@@ -20,10 +27,7 @@ export default function Cart() {
 
     return (
         <div className="cart">
-            <h1 className="cart__title">Su pedido:</h1>
-            {cartList.map(el => <CartItem key={el.id} item={el}/>)}
-            <p>{`Costo total: $${totalPrice}`}</p>
-            <button onClick={clearCart}>Vaciar pedido</button>
+            <CartList sendOrderManage={sendOrderManage}/>
         </div>
     );
 }
