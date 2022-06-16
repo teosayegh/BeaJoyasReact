@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css";
-import logo from "../logos/apple-icon.png";
+import logo from "../Icons/apple-icon.png";
 import CartWidget from "../CartWidget/CartWidget";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';

@@ -5,3 +5,46 @@ li {
 .cart__remove-icon {
     cursor: pointer;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.header{
+	border-style: outset;
+	border-color: rgb(0, 51, 102);
+	border-width: 1px;
+	border-bottom-style: inset;
+    border-right-style: inset;
+}
+
+.section{
+	border-style: groove;
+	border-color: rgb(0, 51, 102);
+	border-width: 1px;
+
+}
+
+
+.footer{
+	border-style: groove;
+	border-color: rgb(0, 51, 102);
+	border-width: 1px;
+	
+	border-bottom-style: inset;
+	border-bottom-style: inset;
+    border-left-style: inset;
+}
+
+#ordenCompra{
+	background-color: #f1f1f1;
+}
+
+.margin{
+	margin-top: 10px;}
+
+@media (min-width: 768px){
+    .col-md-9 {
+    flex: 0 0 auto;
+    width: 100%;
+}}

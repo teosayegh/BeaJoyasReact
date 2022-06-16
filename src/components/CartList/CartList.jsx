@@ -2,6 +2,7 @@ import { useState } from "react";
 import { UseCartContext } from "../../Context/CartContext";
 import CartItem from "../CartItem/CartItem";
 import './CartList.css';
+import ListGroup from 'react-bootstrap/ListGroup'
 
 export default function CartList({sendOrderManage}) {
     const [customerData, setCustomerData] = useState({});
@@ -29,10 +30,36 @@ export default function CartList({sendOrderManage}) {
     }
 
     return (
-        <div className="cartList">
-            <h1 className="cart__title">Su pedido:</h1>
-            {cartList.map((el) => <CartItem key={el.id} item={el}/>)}
-            <p>{`Costo total: $${totalPrice}`}</p>
+        <div>
+            <header className="space">
+			    <div className="header container">
+                    <div className="col-xs-9 col-md-9">
+                        <h4 className="text-center">SU PEDIDO</h4>
+                    </div>
+                </div>
+		    </header>
+            <ListGroup>
+                <ListGroup.Item>{cartList.map((el) => <CartItem key={el.id} item={el}/>)}</ListGroup.Item>
+            </ListGroup>
+            <footer className="margin">
+			    <div className="footer container">
+				    <div className="col-xs-5 col-md-5">
+					    <table className="table table-striped">
+						<thead>
+							<tr>
+								<th>Total a pagar</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{`$${totalPrice}`}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</footer>
             <p>Ingrese sus datos para enviar el pedido:</p>
             <form action="">
                 <input name="name" onChange={(e) => changeHandler(e)} type="text" placeholder="Nombre" />
@@ -49,8 +76,19 @@ export default function CartList({sendOrderManage}) {
                 <br />
                 <textarea name="comment" onChange={(e) => changeHandler(e)} id="" cols="30" rows="10"></textarea>
             </form>
-            <button onClick={clearCart}>Vaciar pedido</button>
-            <button onClick={dataManage}>Enviar pedido</button>
+            <button className="button1" onClick={clearCart}>Vaciar pedido</button>
+            <button className="button1" onClick={dataManage}>Enviar pedido</button>
         </div>
     );
 }
+
+/* <div className="cartInfo">
+                <form onSubmit={(e) => newOrder(e)}>
+                  <input type="email" placeholder="Mail" name="email" onChange={handleInputChange} />
+                  <input type="text" placeholder="Nombre" name="name" onChange={handleInputChange} />
+                  <input type="text" placeholder="Apellido" name="lastName" onChange={handleInputChange} />
+                  <input type="text" placeholder="Dirección" name="adress" onChange={handleInputChange} />
+                  <input type="text" placeholder="Localidad" name="city" onChange={handleInputChange} />
+                  <button type="submit">Terminar pedido</button>
+                </form>
+              </div> */

@@ -1,6 +1,6 @@
 import { UseCartContext } from "../../Context/CartContext";
 import './CartItem.css';
-import iconDelete from "../logos/delete.png"
+import iconDelete from "../Icons/delete.png"
 
 export default function CartItem({item}) {
     const {clearItem} = UseCartContext();
@@ -10,13 +10,44 @@ export default function CartItem({item}) {
     }
     
     return (
-        <li> {item.name} - Precio: ${item.price} - Cantidad: {item.quantity} - <span className="cart__remove-icon" onClick={removeItem}>
+        <div>
+		<section>
+			<div className="section container">
+				<div className="col-xs-12 col-md-12">
+					<table className="table table-striped">
+						<thead>
+							<tr>
+								<th>#id</th>
+								<th>Nombre</th>
+								<th>Precio</th>
+								<th>Cantidad</th>
+								<th>Eliminar</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{item.id}</td>
+								<td>{item.name}</td>
+								<td>${item.price}</td>
+								<td>{item.quantity}</td>
+								<td><button classNameName="cart__remove-icon" onClick={removeItem}>
         <img
         alt=""
         src={iconDelete}
         width="25"
         height="25"
-        /></span></li>
+        /></button></td>
+                                
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</section>
+
+	</div>
     );
 }
 

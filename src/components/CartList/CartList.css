@@ -9,3 +9,8 @@ p {
     font-size: 2rem;
     margin: 1rem;
 }
+
+.space {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
