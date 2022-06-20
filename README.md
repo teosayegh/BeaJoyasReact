@@ -29,5 +29,5 @@ HTML, CSS, JS, BOOTSTRAP, GIT, GITHUB, REACT
 
 
 # DEPOY
-
+https://beajoyasreact.netlify.app/
 

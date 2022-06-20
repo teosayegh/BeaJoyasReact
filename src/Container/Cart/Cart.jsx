@@ -19,7 +19,7 @@ export default function Cart() {
             <div className="cart">
                 {orderSent ? <h1> Pedido enviado! Nro de pedido: {orderId}</h1> : <h1>El pedido está vacío</h1>}
                 <Link to='/'>
-                    <button>Volver al menú</button>
+                    <button className="button1">Volver al menú</button>
                 </Link>
             </div>
         );
