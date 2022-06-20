@@ -61,34 +61,38 @@ export default function CartList({sendOrderManage}) {
 			</div>
 		</footer>
             <p>Ingrese sus datos para enviar el pedido:</p>
-            <form action="">
-                <input name="name" onChange={(e) => changeHandler(e)} type="text" placeholder="Nombre" />
+            <div className="form">
+            <div className="contact__secction-container">
+        <div className="row">
+            <div className="contact__secction__item">
+                <label>Nombre</label>
                 {nameError && <span>Debe ingresar un nombre</span>}
-                <br />
-                <input name="phone" onChange={(e) => changeHandler(e)} type="tel" placeholder="Teléfono" />
+                <input name="name" onChange={(e) => changeHandler(e)} type="text"/>
+                
+            </div>
+            <div className="contact__secction__item">
+                <label>Telefono</label>
                 {phoneError && <span>Debe ingresar un teléfono</span>}
-                <br />
-                <input name="email" onChange={(e) => changeHandler(e)} type="email" placeholder="Correo eléctronico" />
+                <input name="phone" onChange={(e) => changeHandler(e)} type="tel"/>
+            </div>
+            <div className="contact__secction__item">
+                <label>Correo eléctronico</label>
                 {emailError && <span>Debe ingresar un correo electrónico</span>}
-                <br />
-                <input name="email2" onChange={(e) => changeHandler(e)} type="email" placeholder="Repita correo electrónico" />
+                <input name="email" onChange={(e) => changeHandler(e)} type="email"/>
+            </div>
+            <div className="contact__secction__item">
+                <label>Repita correo electrónico</label>
                 {email2Error && <span>El correo electrónico no coincide</span>}
-                <br />
-                <textarea name="comment" onChange={(e) => changeHandler(e)} id="" cols="30" rows="10"></textarea>
-            </form>
+                <input name="email2" onChange={(e) => changeHandler(e)} type="email"/>
+            </div>
+        </div>
+    </div>
+    </div>
             <button className="button1" onClick={clearCart}>Vaciar pedido</button>
             <button className="button1" onClick={dataManage}>Enviar pedido</button>
         </div>
     );
 }
 
-/* <div className="cartInfo">
-                <form onSubmit={(e) => newOrder(e)}>
-                  <input type="email" placeholder="Mail" name="email" onChange={handleInputChange} />
-                  <input type="text" placeholder="Nombre" name="name" onChange={handleInputChange} />
-                  <input type="text" placeholder="Apellido" name="lastName" onChange={handleInputChange} />
-                  <input type="text" placeholder="Dirección" name="adress" onChange={handleInputChange} />
-                  <input type="text" placeholder="Localidad" name="city" onChange={handleInputChange} />
-                  <button type="submit">Terminar pedido</button>
-                </form>
-              </div> */
+<p> DATOS PARA EL ENVÍO </p>
+    

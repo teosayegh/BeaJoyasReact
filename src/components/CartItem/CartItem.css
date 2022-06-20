@@ -48,3 +48,8 @@ li {
     flex: 0 0 auto;
     width: 100%;
 }}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: #F1C1DA;
+    color: black;
+}

@@ -14,3 +14,17 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.form {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #ea98f5;
+    margin-bottom: 10px;
+}
+
+.contact__secction__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
