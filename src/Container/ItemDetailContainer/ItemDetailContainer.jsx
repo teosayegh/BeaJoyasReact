@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../../components/ItemDetail/ItemDetail";
-import './ItemDetailContainer.css';
 import {doc, getDoc, getFirestore } from "firebase/firestore"
 import Loader from "../../components/Loader/Loader"
+import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import './ItemDetailContainer.css';
 
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});

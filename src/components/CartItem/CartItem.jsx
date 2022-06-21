@@ -37,16 +37,12 @@ export default function CartItem({item}) {
         width="25"
         height="25"
         /></button></td>
-                                
 							</tr>
-							
 						</tbody>
 					</table>
 				</div>
-
 			</div>
 		</section>
-
 	</div>
     );
 }

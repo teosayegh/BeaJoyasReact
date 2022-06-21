@@ -25,7 +25,7 @@ export default function CartList({sendOrderManage}) {
         setEmailError(!customerData.email);
         setEmail2Error(!(customerData.email2 === customerData.email));
         if (customerData.name && customerData.phone && customerData.email && (customerData.email2 === customerData.email)) {
-            sendOrderManage(customerData);
+        sendOrderManage(customerData);
         }
     }
 
@@ -62,37 +62,33 @@ export default function CartList({sendOrderManage}) {
 		</footer>
             <p>Ingrese sus datos para enviar el pedido:</p>
             <div className="form">
-            <div className="contact__secction-container">
-        <div className="row">
-            <div className="contact__secction__item">
-                <label>Nombre</label>
-                {nameError && <span>Debe ingresar un nombre</span>}
-                <input name="name" onChange={(e) => changeHandler(e)} type="text"/>
-                
-            </div>
-            <div className="contact__secction__item">
-                <label>Telefono</label>
-                {phoneError && <span>Debe ingresar un teléfono</span>}
-                <input name="phone" onChange={(e) => changeHandler(e)} type="tel"/>
-            </div>
-            <div className="contact__secction__item">
-                <label>Correo eléctronico</label>
-                {emailError && <span>Debe ingresar un correo electrónico</span>}
-                <input name="email" onChange={(e) => changeHandler(e)} type="email"/>
-            </div>
-            <div className="contact__secction__item">
-                <label>Repita correo electrónico</label>
-                {email2Error && <span>El correo electrónico no coincide</span>}
-                <input name="email2" onChange={(e) => changeHandler(e)} type="email"/>
-            </div>
+                <div className="contact__secction-container">
+                    <div className="row">
+                        <div className="contact__secction__item">
+                            <label>Nombre</label>
+                            {nameError && <span>Debe ingresar un nombre</span>}
+                            <input name="name" onChange={(e) => changeHandler(e)} type="text"/>
+                        </div>
+                        <div className="contact__secction__item">
+                            <label>Telefono</label>
+                            {phoneError && <span>Debe ingresar un teléfono</span>}
+                            <input name="phone" onChange={(e) => changeHandler(e)} type="tel"/>
+                        </div>
+                        <div className="contact__secction__item">
+                            <label>Correo eléctronico</label>
+                            {emailError && <span>Debe ingresar un correo electrónico</span>}
+                            <input name="email" onChange={(e) => changeHandler(e)} type="email"/>
+                        </div>
+                        <div className="contact__secction__item">
+                            <label>Repita correo electrónico</label>
+                            {email2Error && <span>El correo electrónico no coincide</span>}
+                            <input name="email2" onChange={(e) => changeHandler(e)} type="email"/>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </div>
-    </div>
             <button className="button1" onClick={clearCart}>Vaciar pedido</button>
             <button className="button1" onClick={dataManage}>Enviar pedido</button>
         </div>
     );
 }
-
-<p> DATOS PARA EL ENVÍO </p>
-    

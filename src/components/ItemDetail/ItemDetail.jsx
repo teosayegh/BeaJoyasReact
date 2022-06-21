@@ -1,5 +1,4 @@
 import React from 'react'
-//import Card from "react-bootstrap/Card";
 import { UseCartContext } from '../../Context/CartContext';
 import { BuyButton } from '../BuyButton/BuyButton';
 import ItemCount from "../ItemCount/ItemCount"
@@ -8,8 +7,6 @@ import { useState } from "react";
 
 
 export default function ItemDetail ({item}) {
-
-
     const [inputType, setInputType] = useState('itemCount');
     const {addToCart} = UseCartContext();
     
@@ -22,8 +19,7 @@ export default function ItemDetail ({item}) {
     return (
         <div class="cardContainer">
             <div>
-                <img class="cardImg"
-                    src={item.img} alt="Imagen del Producto" />
+                <img class="cardImg" src={item.img} alt="Imagen del Producto" />
             </div>
             <div class="cardProd">
                 <p class="cardP">{item.category}</p>
@@ -39,6 +35,3 @@ export default function ItemDetail ({item}) {
         </div>
     )
 }
-
-
-
